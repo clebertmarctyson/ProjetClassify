@@ -1,0 +1,22 @@
+{
+  "name": "ProjetClassify",
+  "version": "1.0.0",
+  "description": "ProjetClassify est mon compagnon ultime pour gérer tous mes projets personnels avec facilité et efficacité. Cette application intelligente me permet d'organiser et de suivre mes projets, qu'ils soient liés à mes projets personnels, mes études universitaires ou mes travaux pour des clients, ect.",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "Gestion de projets",
+    "Suivi de projets",
+    "Productivité",
+    "Gestion du temps"
+  ],
+  "author": "clebertmarctyson <marctysonclebert9@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

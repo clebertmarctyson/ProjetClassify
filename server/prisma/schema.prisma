@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Modèle pour les catégories de projets
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  projects Project[]
+}
+
+// Modèle pour les projets
+model Project {
+  id            Int            @id @default(autoincrement())
+  name          String
+  description   String
+  githubLink    String
+  status        ProjectStatus
+  categoryId    Int
+  category      Category       @relation(fields: [categoryId], references: [id])
+  collaborators Collaborator[] @relation("ProjectCollaborators")
+}
+
+// Modèle pour les collaborateurs
+model Collaborator {
+  id       Int       @id @default(autoincrement())
+  name     String
+  email    String    @unique
+  projects Project[] @relation("ProjectCollaborators")
+}
+
+// Enum pour les différents statuts d'un projet
+enum ProjectStatus {
+  ONGOING
+  PAUSED
+  COMPLETED
+}
