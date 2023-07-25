@@ -1,0 +1,63 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-07-25T07:16:35.407Z",
+  "__export_source": "insomnia.desktop.app:v2023.3.0",
+  "resources": [
+    {
+      "_id": "req_3328e8e2f10440318dda81b77e0eee59",
+      "parentId": "wrk_a84a3a2289bb46318a0cd1949ba8c9b6",
+      "modified": 1690269297142,
+      "created": 1690269242646,
+      "url": "{{ _.BASE_URL }}:{{ _.PORT }}/api/categories",
+      "name": "Get All Categories",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1690269242646,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_a84a3a2289bb46318a0cd1949ba8c9b6",
+      "parentId": null,
+      "modified": 1690269165987,
+      "created": 1690269165987,
+      "name": "ProjetClassify",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_913a335005a625fe39d0cc6955aaf5d087e873f4",
+      "parentId": "wrk_a84a3a2289bb46318a0cd1949ba8c9b6",
+      "modified": 1690269238827,
+      "created": 1690269165988,
+      "name": "Base Environment",
+      "data": { "BASE_URL": "http://localhost", "PORT": 5000 },
+      "dataPropertyOrder": { "&": ["BASE_URL", "PORT"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1690269165988,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_913a335005a625fe39d0cc6955aaf5d087e873f4",
+      "parentId": "wrk_a84a3a2289bb46318a0cd1949ba8c9b6",
+      "modified": 1690269165989,
+      "created": 1690269165989,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
